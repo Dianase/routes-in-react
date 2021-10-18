@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
+import About from "./components/About";
+import Home from "./components/Home"
 import "./App.css";
 
 function App() {
@@ -25,15 +27,19 @@ function App() {
         </nav>
       </header>
       <Switch>
+      <Route exact path='/'>
+        <Home/>
+        </Route>
         <Route path='/contact'>
         <h1>Contact</h1>
         </Route>
         <Route path='/about'>
-        <h1>About</h1>
+        <About/>
         </Route>
         <Route path='/'>
-        <h1>Home</h1>
+        <h1>404- Page not found</h1>
         </Route>
+        
       </Switch>
     </Router>
   );
